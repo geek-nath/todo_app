@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My todo app | Using localStorage</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+</head>
+
+<body>
+  <main class="todo_container shadow">
+    <h2 class="text-primary fw-bold text-capitalize lh-sm">My todo app.</h2>
+    <div class="text-light small">Add your daily todo's with just a click</div>
+    <div class="mt-4">
+      <form class="d-flex flex-column gap-3" id="todoForm" action="#">
+        <div>
+          <div class="text-light">Daily todo:</div>
+          <input type="text" required class="form-control shadow text-white bg-transparent" id="todoName">
+        </div>
+        <div>
+          <button class="w-100 btn btn-primary shadow">Add todo</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="todoContainer">
+
+    </div>
+    <div id="completedTodoContainer" class="mt-4 d-none">
+      <div class="text-center">
+        <button class="btn btn-primary shadow" id="seeCompletedTodoBtn" onclick="openModal()">See completed
+          todos</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- modal -->
+  <div class="modal_wrapper d-none" id="modalWrapper">
+    <div class="modal_container shadow">
+      <h5 class="text-white mt-3">Completed todos</h5>
+      <div id="completedTodoBox"></div>
+      <div class="mt-3 float-end">
+        <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        <button class="btn btn-danger ms-2" onclick="clearCompletedTodo()">Clear all</button>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/all.min.js"></script>
+  <script src="./assets/js/sweetalert.min.js"></script>
+</body>
+
+</html>
